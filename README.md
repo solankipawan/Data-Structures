@@ -1,4 +1,4 @@
-# Data-Structures
+# ![Logo](https://github.com/P-solanki29/Data-Structures/blob/master/git.jpeg) Data-Structures
 ### This Repository conatins the implementations of different *data structures* corresponds to there specific operations.
 
 _Connects with me_:
