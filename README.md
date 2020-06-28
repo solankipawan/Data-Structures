@@ -1,3 +1,4 @@
+<img src="https://github.com/P-solanki29/Data-Structures/blob/master/git.jpeg" width="48" height="40">
 #  Data-Structures
 ### This Repository conatins the implementations of different *data structures* corresponds to there specific operations.
 
