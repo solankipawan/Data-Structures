@@ -10,15 +10,6 @@ struct Node
 
 Node* head;
 
-// void Reverse(Node* p){
-//     if(p->next == NULL){
-//         p = head;
-//         return;
-//     }
-//     Reverse(p->next);
-//     Node* q = p->next;
-//     q->next = p;
-//     p->next = NULL;
  Node* reverse(Node* node) 
     { 
         if (node == NULL) 
@@ -33,8 +24,6 @@ Node* head;
         return node; 
     } 
 
-
-// }
 void insert(int data, int pos)
 {
     Node* temp1 = new Node();
