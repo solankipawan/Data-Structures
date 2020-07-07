@@ -9,14 +9,16 @@ struct BSTNode
     BSTNode* left;
     BSTNode* right;
 };
-BSTNode* GetNewNode(int data){
+
+BSTNode* GetNewNode(int data){ //function to get the new Node.
     BSTNode* newNode = new BSTNode();
     newNode->data = data;
     newNode->left = NULL;
     newNode->right = NULL;
     return newNode;
 }
-BSTNode* Insert(BSTNode* root, int data){
+
+BSTNode* Insert(BSTNode* root, int data){ //Insert function to insert the elements in bst.
     if(root == NULL){ //Empty Tree
         root = GetNewNode(data);
     }
@@ -28,7 +30,8 @@ BSTNode* Insert(BSTNode* root, int data){
     }
     return root;
 }
-bool Search(BSTNode* root, int data){
+
+bool Search(BSTNode* root, int data){ //To search elements from bst.
     if(root == NULL){
         return false;
     }
@@ -42,6 +45,7 @@ bool Search(BSTNode* root, int data){
         return Search(root->right, data);
     }
 }
+
 int main(){
     BSTNode* root = NULL; // pointer to root node. Setting tree empty.
     root = Insert(root, 15);
