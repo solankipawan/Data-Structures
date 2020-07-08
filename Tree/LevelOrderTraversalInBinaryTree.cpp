@@ -1,6 +1,3 @@
-/* The height of bst is defined as the number of edges in the longest path from root to leaf node.
-Height of tree = height of root node.
-Depth of node = No. of edges in path from root to that node*/
 #include <bits/stdc++.h>
 //BST implementation in c++ and to find the min and max element of BST.
 
@@ -13,12 +10,6 @@ struct BSTNode
     BSTNode* right;
 };
 
-int Findheight(BSTNode* root){
-    if(root ==NULL){
-        return -1;
-    }
-    return max(Findheight(root->left), Findheight(root->right))+1;
-}
 
 BSTNode* GetNewNode(int data){ //function to get the new Node.
     BSTNode* newNode = new BSTNode();
@@ -40,20 +31,26 @@ BSTNode* Insert(BSTNode* root, int data){ //Insert function to insert the elemen
     }
     return root;
 }
-
-bool Search(BSTNode* root, int data){ //To search elements from bst.
+void LevelOrder(BSTNode* root){
     if(root == NULL){
-        return false;
+        return;
     }
-    else if(root->data == data){
-        return true;
+    queue<BSTNode*> Q;
+    Q.push(root);
+    //While at least one discovered Node.
+    while (!Q.empty()) {
+        BSTNode* current = Q.front();
+        cout<< current->data<<" ";
+        if(current->left != NULL) {
+            Q.push(current->left);
+        }
+        if(current->right != NULL){
+            Q.push(current->right);
+        }
+        Q.pop(); // removing the element at front.
+        
     }
-    else if(data<= root->data){
-        return Search(root->left, data);
-    }
-    else {
-        return Search(root->right, data);
-    }
+    
 }
 
 int main(){
@@ -64,15 +61,6 @@ int main(){
     root = Insert(root, 25);
     root = Insert(root, 8);
     root = Insert(root, 12);
-    int a =  Findheight(root);
-    cout<<"The maximum height of tree is: "<< a << endl;
-    int number;
-    cout<< "Enter the number to be searched\n";
-    cin>> number;
-    if(Search(root, number) == true){
-        cout<<"Found\n";
-    }
-    else{
-        cout<<"Not found\n";
-    }
+    LevelOrder(root);
+    
 }
