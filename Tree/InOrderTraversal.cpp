@@ -9,15 +9,14 @@ struct BSTNode
     BSTNode* left;
     BSTNode* right;
 };
-// post Order Traversal means  <leftChild> <RightChild><root>
-void postOrderTraversal(BSTNode* root){
+// In Order Traversal means  <leftChild> <root> <RightChild>
+void InOrderTraversal(BSTNode* root){
     if(root == NULL){
         return;
     }
-
-     postOrderTraversal(root->left);
-     postOrderTraversal(root->right);
+    InOrderTraversal(root->left);
      cout<<root->data<<" ";
+    InOrderTraversal(root->right);
 
 }
 
@@ -52,6 +51,6 @@ int main(){
     root = Insert(root, 25);
     root = Insert(root, 8);
     root = Insert(root, 12);
-    postOrderTraversal(root);
+    InOrderTraversal(root);
     
 }
