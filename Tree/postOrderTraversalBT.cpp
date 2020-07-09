@@ -16,8 +16,8 @@ void postOrderTraversal(BSTNode* root){
     }
 
      postOrderTraversal(root->left);
+     postOrderTraversal(root->right);
      cout<<root->data<<" ";
-      postOrderTraversal(root->right);
 
 }
 
