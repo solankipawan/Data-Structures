@@ -2,6 +2,6 @@
 <h3> This Repository conatins the implementations of different data structures corresponds to there specific operations. </h3>
 
 _Connects with me on_:
-1. [Twitter](https://twitter.com/P_one_16_key "Pawan Solanki")
-1. [Instagram](https://www.instagram.com/p_one_16_key/ "Pawan Solanki")
+1. [Twitter](https://twitter.com/pawansolanki29 "Pawan Solanki")
+1. [Instagram](https://www.instagram.com/solankipawna29/ "Pawan Solanki")
 1. [LinkedIn](https://www.linkedin.com/in/pawan-solanki/ "Pawan Solanki")
